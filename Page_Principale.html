@@ -12,9 +12,8 @@
             <a class="navbar-brand" href="#">
                 <img src="ender-magnolia.jpg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
             </a>
-
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
+            <div class="d-flex justify-content-around" id="navbarNav">
+                <ul class="navbar-nav d-flex ">
                     <li class="nav-item">
                       <a class="nav-link active" aria-current="page" href="#">Active</a>
                     </li>
@@ -35,25 +34,26 @@
         </div>
     </nav>
     <!--- Ma barre de recherche est vraiment mal chier dans page internet-->
-    <div class="navbar bg-body-tertiary">
-        <div class="container">
-            <div class="input-group">
-                <span class="input-group-text"><i class="fas fa-search"></i></span>
-                <input type="text" class="form-control" placeholder="Rechercher...">
-            </div>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-            </li>
+
+    <div class="d-flex justify-content-around">
+        <div class="d-flex flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">
+                <i class="bi bi-search"></i>
+            </span>
+            <input type="text" class="form-control" placeholder="Username">
         </div>
+            <p>Trier par : </p>
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Select
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
     </div>
+    
     <div class="container">
         <div class="row">
             <div class="col-4">
