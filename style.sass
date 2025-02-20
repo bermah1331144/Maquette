@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+@import "node_modules/bootstrap/scss/bootstrap";
 
 $couleur1 : #222831
 $couleur2 : #393E46
@@ -9,6 +10,32 @@ $couleur4 : #EEEEEE
 $typographie1 : 'Lora', serif
 $typographie2 : 'Open Sans', sans-serif
 
+.contrainer-fluid
+  background-color: $couleur2 
+
+.card-container
+  background-color: $couleur1
+
+.bg-body-tertiary
+  background-color: $couleur2
+
+.logo
+  width: 60px
+
+  @media screen and (max-width: 768px) 
+    width: 450px
+    height: 200px
+
+.navbar-toggler
+  margin-left: auto
+
+.hide-svg
+  @media screen and (max-width: 768px)
+    display: none
+
+        
+      
+  
 .card-titre , .nav-link , .text-center
   font-family: $typographie1
 
