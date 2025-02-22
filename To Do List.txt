@@ -1,0 +1,8 @@
+TO DO LIST
+
+Dans mon ficher api.js
+    Voici la liste:
+        - add dans la fonction createDataPublications(${****})
+        -Tester fonction async function insererDataPublications(dataPublications) */
+
+Dans mon ficher FormulaireAdd.html 
