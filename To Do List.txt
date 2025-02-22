@@ -1,8 +1,14 @@
 TO DO LIST
 
+ATTENTION DOIT ADD : jQUery et JQuery UI
+
 Dans mon ficher api.js
     Voici la liste:
         - add dans la fonction createDataPublications(${****})
-        -Tester fonction async function insererDataPublications(dataPublications) */
+        -Tester fonction async function insererDataPublications(dataPublications)
+        -Vérifier toute mes fonction par rapport a l'insersion automatique de l'identifiant et a date 
 
-Dans mon ficher FormulaireAdd.html 
+Dans mon ficher FormulaireAdd.html
+    liste
+        - Boite de dialogue doit etre cavher
+
