@@ -4,11 +4,26 @@ ATTENTION DOIT ADD : jQUery et JQuery UI
 
 Dans mon ficher api.js
     Voici la liste:
-        - add dans la fonction createDataPublications(${****})
-        -Tester fonction async function insererDataPublications(dataPublications)
-        -Vérifier toute mes fonction par rapport a l'insersion automatique de l'identifiant et a date 
+        {
+            AUCUN ERREUR SAUF dans la fonction addInfomation() 
+                - ERREUR au niveau de la promesse
 
+
+            N'arrive pas a voir le resultat de mes fonctions MAIS PAS erreur
+                - add dans la fonction createDataPublications(${****})
+                -Tester fonction async function insererDataPublications(dataPublications)
+                -Vérifier toute mes fonction par rapport a l'insersion automatique de l'identifiant et a date 
+        }
+ETAPE 4
 Dans mon ficher FormulaireAdd.html
-    liste
-        - Boite de dialogue doit etre cavher
+    Voici la liste des choses fait MAIS en erreur
+        - Dans ficher jQUery-UI
+            -ma fonction qui affiche la boite est en erreur aucune idee de pbl ????
+
+    Voici la liste a tester 
+        -Dans ficher api.js
+            - async function getCommentairesAsyc()
+            - function createDataCommentaires(data)
+            - async function getCommentAsyc(params)
+      
 

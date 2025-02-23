@@ -61,25 +61,28 @@
                 </table>
             </div>
             <div class="d-flex justify-content-end"> 
-                <input class="btn btn-primary" type="submit" value="Submit">
+                <button id="openDialog" class="btn btn-primary">Confirmation</button>
             </div>
         </div>
     </div>
     <!----DOIT CACHER LA BOITE DE DIALOGUE-->
-    <div class="container boite-dialogue">
-        <div class="row">
-            <div class = "d-flex justify-content-center">
-                <div class = col-1>
-                    <div id="boiteDialogue" titre="confirmation">
-                        <p>Voulez-vous vraiment envoyer votre publication?</p>
-                        <div class="d-flex justify-content-end"> 
-                            <input class="btn btn-primary" type="submit" value="Submit">
+    <!--<div class="collapse" id="collapseForm">-->
+        <div class="container boite-dialogue">
+            <div class="row">
+                <div class = "d-flex justify-content-center">
+                    <div class = col-1>
+                        <div id="boiteDialogue" titre="confirmation">
+                            <p>Voulez-vous vraiment envoyer votre publication?</p>
+                            <div class="d-flex justify-content-end"> 
+                                <input class="btn btn-primary" type="submit" value="Oui">
+                                <input class="btn btn-primary" type="submit" value="Non">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    <!--</div>-->
     <footer >
         <div class="container">
             <div class="row">
@@ -114,13 +117,12 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="js/api.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery-ui.js"></script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- jQuery UI -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
 </body>
 </html>
