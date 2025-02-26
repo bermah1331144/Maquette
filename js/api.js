@@ -9,11 +9,25 @@ http://localhost:3000/commentaires
 
 
 
-const { get } = require("jquery");
+
+//permet de charger le DOM pour les publications
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("Le DOM est chargé !");
+    getPublicationsAsyc();
+});
+
+//permet de charger le DOm pour les commentaires
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("Le DOM est chargé !");
+    getCommentairesAsyc();
+}); 
+
 
 /*--------------------  Requetes a porpos de PUBLICATIONS --------------------*/
 
-const dataPublications = document.getElementById("card-body");
+const dataPublications = document.getElementById("dynamicCardsContainer");
+
+
 //Obtenir les publications
 async function getPublicationsAsyc(){
     try {
@@ -30,7 +44,7 @@ async function getPublicationsAsyc(){
 //doit creer une fonction pour creer les publications dans les cards
 
 function createDataPublications(data){
-    //const dataPublications = document.getElementById("card-body");
+    const dataPublications = document.getElementById("dynamicCardsContainer");
     
     if(!dataPublications) return;
 
@@ -58,7 +72,7 @@ function createDataPublications(data){
 
 }
 
-
+document.addEventListener("DOMContentLoaded", getPublicationsAsyc);
 
 
 //Fontion pour inserer les informations des publications
@@ -121,10 +135,6 @@ async function addInfomation(){
 }
 
 
-/*--------------------  Requetes a porpos de COMMENTAIRES --------------------*/
-//Doit faire une requete AJAX a l'API pour obtenir la publication. 
-// en utilisante les query parameters je doit opteniridentifiant a charger
-
 //appeler la fonctione pour obternir les infomartion de la publication
 //!!!! Pas sur que j'en est BEOSIN ??
 async function getIdLoadAsyc(params) {
@@ -145,6 +155,10 @@ async function getIdLoadAsyc(params) {
 
 }
 
+/*--------------------  Requetes a porpos de COMMENTAIRES --------------------*/
+//Doit faire une requete AJAX a l'API pour obtenir la publication. 
+// en utilisante les query parameters je doit opteniridentifiant a charger
+
 
 //fonction obterni commentaires
 async function getCommentairesAsyc(){
@@ -161,7 +175,7 @@ async function getCommentairesAsyc(){
 //fonction creation des commentaires
 
 function createDataCommentaires(data){
-    const dataCommentaires = document.getElementById("commentaires");
+    const dataCommentaires = document.getElementById("commentaire");
     dataCommentaires.innerHTML = "";
 
     data.forEach(commentaire => {
@@ -172,7 +186,7 @@ function createDataCommentaires(data){
                     <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
                     <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"/>
                     </svg>
-                    <p class="text-start">Start aligned text on all viewport sizes.</p>
+                    <p class="text-start">${commentaire.content}</p>
                 </div>
             </div>
         `;
@@ -181,8 +195,22 @@ function createDataCommentaires(data){
 }
 
 
-//consultation d'un commentaire
-async function getCommentAsyc(params) {
-    
-}
 //Ajouter un commmtaire 
+async function addCommentaire(){
+    const publicationId = generateId();
+    const date = getCurrentDate();
+    const content = document.getElementById("content").value;
+    const dataCommentaires = { publicationId, date, content };
+    const response = await fetch("http://localhost:3000/commentaires", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(dataCommentaires)
+    });
+
+    if (response.ok) {
+            const data = await response.json();
+            createDataCommentaires(data);
+        }
+}

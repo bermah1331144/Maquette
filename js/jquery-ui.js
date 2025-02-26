@@ -1,7 +1,7 @@
 //PAGE FormulaireAdd
     //Boite dialogue
 
-/*initalise laboite de dialogue
+//initalise laboite de dialogue
 $("#openDialog").click(function () {
     $("#collapseForm").collapse("show");
 });
@@ -25,7 +25,7 @@ $("#boiteDialogue").dialog({
             $(this).dialog("close");
         }
     }
-});*/
+});
 
 //Fonction qui vas enclancher la boite de dialogue
 //ATTENTION J,ai une erreur que je ne comprend pas 
