@@ -86,4 +86,9 @@ async function getIdLoadAsyc(params) {
     }
 
 }
-
+/* -------Doit faire une requete jQuery --------*/
+$(document).ready(function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const publicationId = urlParams.get("id");
+    getPublicationsAsyc(publicationId);
+});

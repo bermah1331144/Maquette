@@ -91,3 +91,5 @@ async function ajouterCommetaires(commentaire){
         console.log(error);
     }
 }
+
+/* -------Doit faire une requete jQuery --------*/
