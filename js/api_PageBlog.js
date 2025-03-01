@@ -8,17 +8,38 @@ async function getCommentairesAsyc(){
     try {
         const response = await fetch("http://localhost:3000/commentaires");
         const commentaire = await response.json();
-        ajouterCommetaires(commentaire);
-        createDataCommentaires(commentaire);
+        affichereDataCommentaires(commentaire);
     } catch (error) {
         console.log(error);
     }
 
 }
 
-//fonction creation des commentaires
+function generateId() {
+    let lastId = localStorage.getItem("lastPublicationId");
+    let newId = lastId ? parseInt(lastId) + 1 : 1;
+    localStorage.setItem("lastPublicationId", newId);
+    return newId;
+}
 
-function createDataCommentaires(data){
+
+//fonction pour inserer les information de la publication
+function generationInfoCommentaire() {
+    let date = new Date().toLocaleDateString();
+    let id = generateId();
+
+    let nouveauCommentaire = {
+        id: id,
+        date: date, 
+        contenu : document.getElementById("content").value
+
+    };
+    return nouveauCommentaire;
+}
+
+//fonction afficher des commentaires
+
+function affichereDataCommentaires(dataCommentaires){
     const dataCommentaires = document.getElementById("commentaire");
     
     if(!dataCommentaires) return;
@@ -42,35 +63,12 @@ function createDataCommentaires(data){
         return dataCommentaires;
     })
 }
+document.addEventListener("DOMContentLoaded", affichereDataCommentaires(dataCommentaires));
 
 
-//declenchement de l'evenement
-document.getElementById("envoyer").addEventListener("click", ajouterCommetaires(commentaire));
-
-//chargement des commentaire sur ma page de blog
-async function chargerCommentairesAfficher(){
-   
-   try{
-        const commentairesDansBD = getCommentairesAsyc();
-
-        if(!commentairesDansBD){
-            throw new Error("Aucun commentaire dans la base de donnée");
-        }
-
-        createDataCommentaires(commentairesDansBD);
-
-        commentairesDansBD.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-        commentairesDansBD.forEach(commentaire => ajouterCommetaires(commentaire));
-    }catch(error){
-        console.log("Il y a une erreur dans la fontion chargerCommentairesAfficher :", error);
-    }
-}
-//document.addEventListener("DOMContentLoaded", getCommentairesAsyc); 
-//document.addEventListener("DOMContentLoaded", chargerCommentaires);
 
 //envoyer donne au server Json
-async function ajouterCommetaires(commentaire){
+async function ajouterCommentaires(commentaire){
     try {
         const response = await fetch("http://localhost:3000/commentaires", {
             method: "POST",
@@ -91,5 +89,12 @@ async function ajouterCommetaires(commentaire){
         console.log(error);
     }
 }
-
-/* -------Doit faire une requete jQuery --------*/
+//declenchement de l'evenement
+document.getElementById("envoyer").addEventListener("click", ajouterCommetaires(commentaire));
+/* ----------Doit faire une requete jQuery -----------*/
+$(document).ready(function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const publicationId = urlParams.get("id");
+    getCommentairesAsyc(publicationId);
+    chargerCommentairesAfficher();
+})

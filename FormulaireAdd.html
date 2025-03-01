@@ -70,19 +70,18 @@
         <div class="container">
             <div class="row">
                 <div class = "d-flex justify-content-center">
-                    <div class = col-1>
-                        <div id="boiteDialogue" titre="confirmation">
-                            <p>Voulez-vous vraiment envoyer votre publication?</p>
-                            <div class="d-flex justify-content-end"> 
-                                <input class="btn btn-primary" type="confirmer" value="Confirmer">
-                                <input class="btn btn-primary" type="annuler" value="Annuler">
-                            </div>
+                    <form id="confirmationAjouteCommentaireForm">
+                        <div class="mb-3">
+                            <label for="commentaire" class="form-label">Voulez-vous vraiment envoyer votre publication?</label>
+                            <textarea class="form-control" id="commentaire" rows="3" required></textarea>
                         </div>
-                    </div>
+                        <button type="submit" class="btn btn-primary">Confirmer</button>
+                        <button type="reset" class="btn btn-primary">Annuler</button>
+                    </form>
                 </div>
             </div>
         </div>
-    </div>
+    
     <footer >
         <div class="container">
             <div class="row">
