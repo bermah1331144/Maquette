@@ -16,71 +16,62 @@ function generateIdPublication() {
     return newId;
 }
 
+
+
 //fonction pour inserer les information du publication dans mon JSON en respectant les attributs
 async function ajouterPublicationBd() {
-    try {
-        const response = await fetch("http://localhost:3000/publications", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                "id": generateIdPublication(),
-                "titre": $("#titre").val(),
-                "auteur": $("#auteur").val(),
-                "date": generationDatePublication(),
-                "contenu": $("#contenu").val()
-            })
-        });
+    document.getElementById("confirmationPublication").addEventListener("submit", async function(event) {
+        event.preventDefault(); 
 
-        if (!response.ok) {
-            throw new Error(`Erreur lors de l'envoie du commentaire     : ${response.status}`);
-        }
+        let attributPublication = {
+            "id": generateIdPublication(),
+            "titre": $("#titre").val(),
+            "auteur": $("#auteur").val(),
+            "date": generationDatePublication(),
+            "contenu": $("#contenu").val()
+        };
 
-        const resultat = await response.json();
-        console.log("Votre publication a étét ajoutée avec succes :", resultat);
-        window.location.href = "Page_Principale.html";
-    } catch (error) {
-        console.log(error);
-    }
-}
-
-/*
-    Creation et contenu de la boite de dialogue
-    Appel la fonction insererCommentaireBd()
-*/
-function creationBoiteDialogue() {
-    
-    $(document).ready(function () {
-        
-        $("#confirmationAjoutePublication").dialog({
-            autoOpen: false,
-            modal: true,
-            buttons: {
-                "confirmer": function () {
-                    ajouterPublicationBd();
-                    $(this).dialog("close");
-                    window.location.href = "Page_Principale.html";
+        try {
+            const response = await fetch("http://localhost:3000/publications", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
                 },
-                "annuler": function () {
-                    $(this).dialog("close");
-                }
-            }
-        })
-    });
+                body: JSON.stringify(attributPublication)
+            });
 
-    $("#openDialog").click(function () {
-        $("#confirmationAjoutePublication").dialog("open");
+            if (response.ok) {
+                const resultat = await response.json();
+                console.log("Votre publication a été ajoutée avec succès :", resultat);
+                window.location.href = "PagePrincipale.html"; 
+            } else {
+                throw new Error(`Erreur lors de l'envoi du commentaire : ${response.status}`);
+            }
+        } catch (error) {
+            console.error("Erreur :", error);
+        }
     });
 }
+
+// Appelle la fonction pour attacher l'événement après le chargement de la page
+ajouterPublicationBd();
+
 
 /*
     fonction qui fait apparaitre la boite de dialogue apres avoir appuyer sur confirmer
     Ìl appel de la fonction creationBoiteDialogue() pour faire apparaitre la boite de dialogue
 */
 $(document).ready(function () {
-    $("#confirmationAjouteCommentaireForm").submit(function (event) {
-        event.preventDefault();
-        creationBoiteDialogue();
+    $("#openDialog").on("click", function () {
+        $("#confirmationAjoutePublication").show();
     });
+});
+
+$("#button[type='reset']").on("click", function () {
+    $("#confirmationAjoutePublication").hide();
+});
+
+$("#comentaireForm").on("submit", function (event) {
+    event.preventDefault();
+    ajouterPublicationBd();
 });

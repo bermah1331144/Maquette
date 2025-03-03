@@ -50,75 +50,17 @@
       "contenu": "Le remake de Resident Evil 4 modernise l'horreur avec des graphismes sublimes. Les mécaniques de jeu ont été améliorées pour une immersion totale."
     },
     {
-      "id": "be47",
-      "publicationId": 5,
-      "date": "2025-02-26",
-      "contenu": ""
+      "id": 179,
+      "titre": "Stardew Valley : Une évasion champêtre captivante",
+      "auteur": " Alex Martin",
+      "date": "2025-03-03"
     },
     {
-      "id": "6434",
-      "publicationId": 6,
-      "date": "2025-02-26",
-      "contenu": ""
-    },
-    {
-      "id": "3f77",
-      "publicationId": 8,
-      "date": "2025-02-26",
-      "contenu": ""
-    },
-    {
-      "id": "f38b",
-      "publicationId": 10,
-      "date": "2025-02-26",
-      "contenu": ""
-    },
-    {
-      "id": "3a4d",
-      "publicationId": 12,
-      "date": "2025-02-26",
-      "contenu": ""
-    },
-    {
-      "id": "8888",
-      "publicationId": 13,
-      "date": "2025-02-26",
-      "contenu": ""
-    },
-    {
-      "id": "b573",
-      "publicationId": 15,
-      "date": "2025-02-26",
-      "contenu": ""
-    },
-    {
-      "id": "16a6",
-      "publicationId": 17,
-      "date": "2025-02-26",
-      "contenu": ""
-    },
-    {
-      "id": "7a0d",
-      "publicationId": 19,
-      "date": "2025-02-26",
-      "contenu": ""
-    },
-    {
-      "id": "0dcc",
-      "publicationId": 20,
-      "date": "2025-02-26",
-      "contenu": ""
-    },
-    {
-      "id": "cbe8",
-      "publicationId": 22,
-      "date": "2025-02-26",
-      "contenu": ""},
-    {
-      "id": "2860",
-      "publicationId": 24,
-      "date": "2025-02-26",
-      "contenu": ""
+      "id": 180,
+      "titre": "Stardew Valley : L'agriculture au cœur du pixel-art",
+      "auteur": "Louis C",
+      "date": "2025-03-03",
+      "contenu": "Ce jeu indépendant offre une expérience immersive où gestion de ferme, amitiés et exploration se mélangent harmonieusement. Sa bande-son apaisante et son gameplay addictif en font un véritable havre de paix pour les joueurs en quête d’évasion."
     }
   ],
   "commentaires": [
@@ -177,57 +119,6 @@
       "date": "2023-08-21",
       "contenu": "Le remake de Resident Evil 4 est incroyable, un vrai retour aux sources !",
       "description": "Le gameplay a été modernisé avec succès."
-    },
-    {
-      "id": "639b",
-      "commentaire": {
-        "commentaire": "Teset"
-      }
-    },
-    {
-      "id": "d26e",
-      "commentaire": {
-        "commentaire": "Tese1"
-      }
-    },
-    {
-      "id": "3757",
-      "commentaire": {
-        "commentaire": "Tese2"
-      }
-    },
-    {
-      "id": "1767",
-      "commentaire": {
-        "commentaire": "Tese3"
-      }
-    },
-    {
-      "id": "b543",
-      "commentaire": {
-        "commentaire": "Tese4"
-      }
-    },
-    {
-      "id": "51cb",
-      "commentaire": {
-        "commentaire": "Tese5"
-      }
-    },
-    {
-      "id": "3765",
-      "commentaire": {
-        "commentaire": "Tese6"
-      }
-    },
-    {
-      "id": "b867"
-    },
-    {
-      "id": "9b96"
-    },
-    {
-      "id": "b9f2"
     }
   ]
 }
