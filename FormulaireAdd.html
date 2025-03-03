@@ -61,16 +61,15 @@
                 </table>
             </div>
             <div class="d-flex justify-content-end"> 
-                <button id="openDialog" class="btn btn-primary">Confirmation</button>
+                <button type="submit" id="openDialog" class="btn btn-primary">Confirmation</button>
             </div>
         </div>
     </div>
     <!----DOIT CACHER LA BOITE DE DIALOGUE-->
-    <!--<div class="collapse" id="collapseForm">-->
-        <div class="container">
+        <div class="container" id="confirmationAjoutePublication" style="display: none;">
             <div class="row">
                 <div class = "d-flex justify-content-center">
-                    <form id="confirmationAjouteCommentaireForm">
+                    <form id="commentaireForm">
                         <div class="mb-3">
                             <label for="commentaire" class="form-label">Voulez-vous vraiment envoyer votre publication?</label>
                             <textarea class="form-control" id="commentaire" rows="3" required></textarea>

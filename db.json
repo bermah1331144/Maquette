@@ -2,124 +2,123 @@
   "publications": [
     {
       "id": "1",
-      "title": "Elden Ring : Un Monde Fantastique à Explorer",
-      "author": "Jean Dupont",
+      "titre": "Elden Ring : Un Monde Fantastique à Explorer",
+      "auteur": "Jean Dupont",
       "date": "2024-02-10",
-      "content": "Elden Ring est un RPG en monde ouvert offrant une aventure épique. Son univers riche et mystérieux promet des heures d'exploration."
+      "contenu": "Elden Ring est un RPG en monde ouvert offrant une aventure épique. Son univers riche et mystérieux promet des heures d'exploration."
     },
     {
       "id": "2",
-      "title": "God of War Ragnarök : Une Suite Époustouflante",
-      "author": "Sophie Lambert",
+      "titre": "God of War Ragnarök : Une Suite Époustouflante",
+      "auteur": "Sophie Lambert",
       "date": "2024-01-25",
-      "content": "Kratos et Atreus poursuivent leur périple dans un monde nordique en pleine tourmente. L'histoire est plus intense que jamais avec des combats dynamiques."
+      "contenu": "Kratos et Atreus poursuivent leur périple dans un monde nordique en pleine tourmente. L'histoire est plus intense que jamais avec des combats dynamiques."
     },
     {
       "id": "3",
-      "title": "The Legend of Zelda : Tears of the Kingdom",
-      "autheur": "Marc Lefebvre",
+      "titre": "The Legend of Zelda : Tears of the Kingdom",
+      "auteur": "Marc Lefebvre",
       "date": "2023-12-18",
-      "content": "Une nouvelle aventure attend Link avec des pouvoirs inédits. L'exploration du ciel et des îles flottantes apporte une nouvelle dimension au gameplay."
+      "contenu": "Une nouvelle aventure attend Link avec des pouvoirs inédits. L'exploration du ciel et des îles flottantes apporte une nouvelle dimension au gameplay."
     },
     {
       "id": "4",
-      "title": "Cyberpunk 2077 : Phantom Liberty, Un Renouveau",
-      "autheur": "Claire Fontaine",
+      "titre": "Cyberpunk 2077 : Phantom Liberty, Un Renouveau",
+      "auteur": "Claire Fontaine",
       "date": "2023-11-10",
-      "content": "L'extension Phantom Liberty apporte un vent de fraîcheur à Night City. De nouvelles missions et un scénario captivant enrichissent l'expérience."
+      "contenu": "L'extension Phantom Liberty apporte un vent de fraîcheur à Night City. De nouvelles missions et un scénario captivant enrichissent l'expérience."
     },
     {
       "id": "5",
-      "title": "Final Fantasy XVI : Un Retour Triomphal",
-      "autheur": "Lucas Bernard",
+      "titre": "Final Fantasy XVI : Un Retour Triomphal",
+      "auteur": "Lucas Bernard",
       "date": "2023-10-05",
-      "content": "L'univers de Final Fantasy XVI offre une immersion totale dans une histoire épique. Le système de combat repensé apporte un dynamisme inédit."
+      "contenu": "L'univers de Final Fantasy XVI offre une immersion totale dans une histoire épique. Le système de combat repensé apporte un dynamisme inédit."
     },
     {
       "id": "6",
-      "title": "Starfield : L'Exploration Interstellaire Commence",
-      "autheur": "Emma Richard",
+      "titre": "Starfield : L'Exploration Interstellaire Commence",
+      "auteur": "Emma Richard",
       "date": "2023-09-15",
-      "content": "Bethesda nous plonge dans une aventure spatiale ambitieuse. La liberté d'exploration et la richesse du lore en font un titre incontournable."
+      "contenu": "Bethesda nous plonge dans une aventure spatiale ambitieuse. La liberté d'exploration et la richesse du lore en font un titre incontournable."
     },
     {
       "id": "7",
-      "title": "Resident Evil 4 Remake : Une Relecture Magistrale",
-      "autheur": "David Moreau",
+      "titre": "Resident Evil 4 Remake : Une Relecture Magistrale",
+      "auteur": "David Moreau",
       "date": "2023-08-20",
-      "content": "Le remake de Resident Evil 4 modernise l'horreur avec des graphismes sublimes. Les mécaniques de jeu ont été améliorées pour une immersion totale."
+      "contenu": "Le remake de Resident Evil 4 modernise l'horreur avec des graphismes sublimes. Les mécaniques de jeu ont été améliorées pour une immersion totale."
     },
     {
       "id": "be47",
       "publicationId": 5,
       "date": "2025-02-26",
-      "content": ""
+      "contenu": ""
     },
     {
       "id": "6434",
       "publicationId": 6,
       "date": "2025-02-26",
-      "content": ""
+      "contenu": ""
     },
     {
       "id": "3f77",
       "publicationId": 8,
       "date": "2025-02-26",
-      "content": ""
+      "contenu": ""
     },
     {
       "id": "f38b",
       "publicationId": 10,
       "date": "2025-02-26",
-      "content": ""
+      "contenu": ""
     },
     {
       "id": "3a4d",
       "publicationId": 12,
       "date": "2025-02-26",
-      "content": ""
+      "contenu": ""
     },
     {
       "id": "8888",
       "publicationId": 13,
       "date": "2025-02-26",
-      "content": ""
+      "contenu": ""
     },
     {
       "id": "b573",
       "publicationId": 15,
       "date": "2025-02-26",
-      "content": ""
+      "contenu": ""
     },
     {
       "id": "16a6",
       "publicationId": 17,
       "date": "2025-02-26",
-      "content": ""
+      "contenu": ""
     },
     {
       "id": "7a0d",
       "publicationId": 19,
       "date": "2025-02-26",
-      "content": ""
+      "contenu": ""
     },
     {
       "id": "0dcc",
       "publicationId": 20,
       "date": "2025-02-26",
-      "content": ""
+      "contenu": ""
     },
     {
       "id": "cbe8",
       "publicationId": 22,
       "date": "2025-02-26",
-      "content": ""
-    },
+      "contenu": ""},
     {
       "id": "2860",
       "publicationId": 24,
       "date": "2025-02-26",
-      "content": ""
+      "contenu": ""
     }
   ],
   "commentaires": [
@@ -127,49 +126,57 @@
       "id": "1",
       "publicationId": 1,
       "date": "2024-02-11",
-      "content": "Elden Ring est vraiment un chef-d'œuvre ! J'adore l'exploration et la liberté de jeu."
+      "contenu": "Elden Ring est vraiment un chef-d'œuvre ! J'adore l'exploration et la liberté de jeu.",
+      "description": "Les environnements sont magnifiques et l'univers est riche."
     },
     {
       "id": "2",
       "publicationId": 1,
       "date": "2024-02-12",
-      "content": "Le combat contre Malenia est incroyable mais tellement difficile !"
+      "contenu": "Le combat contre Malenia est incroyable mais tellement difficile !",
+      "description": "Un vrai challenge pour les joueurs les plus aguerris."
     },
     {
       "id": "3",
       "publicationId": 2,
       "date": "2024-01-26",
-      "content": "God of War Ragnarök est une pure merveille. L'histoire entre Kratos et Atreus est fascinante."
+      "contenu": "God of War Ragnarök est une pure merveille. L'histoire entre Kratos et Atreus est fascinante.",
+      "description": "L'évolution des personnages est très bien écrite."
     },
     {
       "id": "4",
       "publicationId": 3,
       "date": "2023-12-20",
-      "content": "Tears of the Kingdom dépasse toutes mes attentes, l'exploration est incroyable."
+      "contenu": "Tears of the Kingdom dépasse toutes mes attentes, l'exploration est incroyable.",
+      "description": "Les nouvelles mécaniques de jeu apportent une grande profondeur."
     },
     {
       "id": "5",
       "publicationId": 4,
       "date": "2023-11-11",
-      "content": "Phantom Liberty améliore vraiment Cyberpunk 2077, j'adore la nouvelle intrigue."
+      "contenu": "Phantom Liberty améliore vraiment Cyberpunk 2077, j'adore la nouvelle intrigue.",
+      "description": "L'ambiance et l'écriture des personnages sont excellentes."
     },
     {
       "id": "6",
       "publicationId": 5,
       "date": "2023-10-06",
-      "content": "Final Fantasy XVI est génial, le combat contre Ifrit est juste épique !"
+      "contenu": "Final Fantasy XVI est génial, le combat contre Ifrit est juste épique !",
+      "description": "Les graphismes et la mise en scène sont impressionnants."
     },
     {
       "id": "7",
       "publicationId": 6,
       "date": "2023-09-16",
-      "content": "Starfield est un rêve pour les fans de science-fiction, l'univers est gigantesque."
+      "contenu": "Starfield est un rêve pour les fans de science-fiction, l'univers est gigantesque.",
+      "description": "Les possibilités d'exploration sont quasi infinies."
     },
     {
       "id": "8",
       "publicationId": 7,
       "date": "2023-08-21",
-      "content": "Le remake de Resident Evil 4 est incroyable, un vrai retour aux sources !"
+      "contenu": "Le remake de Resident Evil 4 est incroyable, un vrai retour aux sources !",
+      "description": "Le gameplay a été modernisé avec succès."
     },
     {
       "id": "639b",
