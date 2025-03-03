@@ -11874,9 +11874,6 @@ textarea.form-control-lg {
 .container-fluid-card .row {
   background-color: #00ADB5 !important;
 }
-.container-fluid-card .row .mt-3 {
-  background-color: #00ADB5 !important;
-}
 
 @media screen and (max-width: 768px) {
   .hide-svg {
@@ -11897,7 +11894,7 @@ textarea.form-control-lg {
   background-color: #222831;
 }
 
-.card-titre, .nav-link, .text-center {
+.card-titre, .nav-link, .text-center, h1, .h1, td {
   font-family: "Lora", serif;
 }
 
@@ -11929,6 +11926,10 @@ textarea.form-control-lg {
   padding: 25px;
   margin: 25px;
   background-color: #EEEEEE;
+}
+
+.card .card-title {
+  background-color: #00ADB5;
 }
 
 .bg-body {
