@@ -42,7 +42,7 @@
             <div class="col-12 text-center">
                 <h1>Formulaire</h1>
             </div>        
-            <div class="formulaire col-12">
+            <form id="publicationForm">
                 <table class="table">
                     <tr>
                         <th class="col-12 text-center">Formulaire d'ajout de publication</th>
@@ -55,11 +55,11 @@
                         <td><input type="text" id="auteur" name="auteur"></td>
                     </tr>
                     <tr>
-                        <td><label for="content">Contenu</label></td>
-                        <td><input type="text" id="content" name="contenu"></td>
+                        <td><label for="contenu">Contenu</label></td>
+                        <td><textarea class="form-control" id="contenu" name="contenu"></textarea></td>
                     </tr>
                 </table>
-            </div>
+            </form>
             <div class="d-flex justify-content-end"> 
                 <button type="submit" id="openDialog" class="btn btn-primary">Confirmation</button>
             </div>
@@ -69,10 +69,9 @@
         <div class="container" id="confirmationAjoutePublication" style="display: none;">
             <div class="row">
                 <div class = "d-flex justify-content-center">
-                    <form id="commentaireForm">
+                    <form id="confirmationPublication">
                         <div class="mb-3">
                             <label for="commentaire" class="form-label">Voulez-vous vraiment envoyer votre publication?</label>
-                            <textarea class="form-control" id="commentaire" rows="3" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Confirmer</button>
                         <button type="reset" class="btn btn-primary">Annuler</button>
@@ -114,14 +113,12 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="js/api.js"></script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- jQuery UI -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
     <script src="js/api_FormulaireAdd.js"></script>
 </body>
 </html>
