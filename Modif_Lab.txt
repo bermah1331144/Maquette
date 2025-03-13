@@ -1,5 +1,0 @@
-Correction du Lab1
-- Respecter la palette de couleur
-- Respecter la typographie
-- Importation de Bootstrap dans SASS   
-- Responsive adéquat

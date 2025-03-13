@@ -1,0 +1,4 @@
+Correction a faire LAB2
+
+L'ajout de commentaires ne fonctionne pas.
+La consultation du blog affiche toujours la même chose.
