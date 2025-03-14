@@ -1,5 +1,3 @@
-const contrainer =document.getElementById("root");
-const root = ReactDom.createRoot(contrainer);
 
 function Header(){
     return (
@@ -35,12 +33,3 @@ function Header(){
     </nav>
     );
 }
-function App() {
-    return (
-        <div>
-            <Header />
-        </div>
-    );
-}
-
-root.render(<App/>);
