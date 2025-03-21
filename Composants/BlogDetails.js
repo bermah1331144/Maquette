@@ -1,0 +1,4 @@
+function BlogDetails({publicationId}) {
+    useEffect(()=>{})
+
+}
