@@ -10,6 +10,7 @@ function BlogList() {
 
     const [blogList, setBlogList] = React.useState([]);
 
+    // !!!! -----------    VOIR CommentList.js il a la reponse pour aller chercher id
     //utilse useEffect pour aller chercher mes publications
     React.useEffect (() => {
         fetchPublications().then((data => setBlogList(data)))
@@ -26,8 +27,8 @@ function BlogList() {
                     <div class="card">
                         <img src={BlogList.img} class="card-img-top" alt="..."/>
                             <div class="card-body">
-                                <h5 class="card-title">{}</h5>
-                                <p class="card-text">Some quick example text.</p>
+                                <h5 class="card-title">{BlogList.titre}</h5>
+                                <p class="card-text">{BlogList.contenu}</p>
                                 <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                     </div>
