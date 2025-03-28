@@ -3,8 +3,16 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 );
 
 function App() {
+
+
+
+
+
     return <>
         <Header />
+        <Blog />
+
+
         <Footer />
     </>
 }

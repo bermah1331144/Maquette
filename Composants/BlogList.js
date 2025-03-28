@@ -18,5 +18,5 @@ function BlogList() {
         );
     }, [])
         const blogCards = blogList.map(blog => <BlogCard key={blog.id} blog={blog} />)
-    return <BlogCards blogCards={blogCards} />
+    return blogCards
 }

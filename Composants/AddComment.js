@@ -1,8 +1,7 @@
-const { set } = require("immutable");
 
 function AddComment({blogId, onCommentAdd}) {
-    const [auteur, setAuteur] = useState('');
-    const [contenu, setContenu] = useState('');
+    const [auteur, setAuteur] = React.useState('');
+    const [contenu, setContenu] = React.useState('');
     
     const HandleSumbit = async(e) => {
         e.preventDefault();

@@ -6,6 +6,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 function App() {
     return <>
         <Header />
+        <BlogList />
         <Footer />
     </>
 }
