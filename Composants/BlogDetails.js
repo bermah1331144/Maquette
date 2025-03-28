@@ -8,7 +8,7 @@ function BlogDetails({publicationId}) {
 
     // !!!! -----------    VOIR CommentList.js il a la reponse pour aller chercher id
     const fetchPublications =async () => {
-        const reponse = await fetch('http://localhost:3000/publications');
+        const reponse = await fetch(`http://localhost:3000/publications/${id}/`);
         if(!reponse.ok) throw new Error(`Erreur lors de la requête : ${reponse.status}`);
         return await reponse.json();
     }

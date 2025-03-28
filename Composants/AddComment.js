@@ -1,21 +1,63 @@
-function AddComment(props) {
+const { set } = require("immutable");
+
+function AddComment({blogId, onCommentAdd}) {
+    const [auteur, setAuteur] = useState('');
+    const [contenu, setContenu] = useState('');
+    
+    const HandleSumbit = async(e) => {
+        e.preventDefault();
+    
+    const nouveauCommentaire = {
+        auteur,
+        contenu,
+        publicationId: blogId
+    }
+    }
     return (
-    <form onSumbmit = {HandleSumbit} >
-        <div class="form-group">
-            <label for="commentaire" class="form-label">Commentaire</label>
-            <textarea class="form-control" id="commentaire" rows="3"></textarea>
-        </div>
-    </form>
+        <form onSubmit={HandleSumbit}>
+            <input
+                type="text"
+                placeholder="Auteur"
+                value={auteur}
+                onChange={(e) => setAuteur(e.target.value)}
+            />
+            <input
+                type="text"
+                placeholder="Contenu"
+                value={contenu}
+                onChange={(e) => setContenu(e.target.value)}
+            />
+            <button type="submit">Ajouter un commentaire</button>
+        </form>
     ) 
 
 }
 
 // doit faire la requete qui va envouyer le commentaire dans mon API
+function ajouterCommentaireBd() {
+    try {
+        const response = fetch("http://localhost:3000/commentaires", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(nouveauCommentaire)
+        });
+        const commentaire = response.json();
+        affichereDataCommentaires(publicationId,commentaire);
+    } catch (error) {
+        console.log(error);
+    }
+    if (response.ok) {
+        const resultat = response.json();
+        console.log("Votre publication a été ajoutée avec succès :", resultat);
 
-
-function HandleSumbit(event) {
-    event.preventDefault();
-    console.log("envoyer");
+        setAuteur('');
+        setContenu('');
+    }
+    else{
+        throw new Error(`Erreur lors de l'envoi du commentaire : ${response.status}`);
+    }
 }
 
 function btn() {

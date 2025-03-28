@@ -17,28 +17,6 @@ function BlogList() {
         .catch(error => console.log(error)
         );
     }, [])
-
-    return (
-
-    <div class="container-card-container">
-        <div class="row justify-content-center">
-            <div id="dynamicCardsContainer" class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col-sm-12 col-lg-4">
-                    <div class="card">
-                        <img src={BlogList.img} class="card-img-top" alt="..."/>
-                            <div class="card-body">
-                                <h5 class="card-title">{BlogList.titre}</h5>
-                                <p class="card-text">{BlogList.contenu}</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                    </div>
-                </div>
-            </div>  
-        </div>         
-    </div>
-    )
+        const blogCards = blogList.map(blog => <BlogCard key={blog.id} blog={blog} />)
+    return <BlogCards blogCards={blogCards} />
 }
-
-function AfficherBlogList(Props){
-
-} 
