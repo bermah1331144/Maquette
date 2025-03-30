@@ -20,12 +20,13 @@ function CommentList({blogId}) {
     return (
 
         <>
+       
+            <div className="comment-list">
+                {commentaires.map((commentaire) => (
+                <Comment key={commentaire.id} commentaire={commentaire} />
+                ))}
+            </div>
         </>
-        /*<div className="comment-list">
-            {commentaires.map((commentaire) => (
-               <Comment key={commentaire.id} commentaire={commentaire} />
-            ))}
-        </div>*/
     )
 
 }

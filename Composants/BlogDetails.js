@@ -24,7 +24,8 @@ function BlogDetails({blogId}) {
         <div className="blog-details">
             <h2>{BlogDetails.titre}</h2>
             <div className="text-center col-12">
-                <img src="/images/img-blog.jpg" className="img-fluid" alt="..."/>
+                {/* mon image est trop grosse */}
+                <img src="/images/img-blog.jpg" className="img-fluid mx-auto d-block" style={{ maxWidth: '600px' }} alt="..."/>
                 <p className="text-">Image</p>
             </div>
             <p>{BlogDetails.contenu}</p>

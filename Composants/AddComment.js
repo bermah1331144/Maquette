@@ -11,6 +11,8 @@ function AddComment({blogId, onCommentAdd}) {
         contenu,
         publicationId: blogId
     }
+
+    await ajouterCommentaireBd(nouveauCommentaire);
     }
     return (
         <form onSubmit={HandleSumbit}>
@@ -61,6 +63,6 @@ function ajouterCommentaireBd() {
 
 function btn() {
     return (
-        <button class="btn btn-primary" id="envoyer">Envoyer</button>
+        <button className="btn btn-primary" id="envoyer">Envoyer</button>
     )
 }

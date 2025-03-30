@@ -17,6 +17,8 @@ function BlogList() {
         .catch(error => console.log(error)
         );
     }, [])
-        const blogCards = blogList.map(blog => <BlogCard key={blog.id} blog={blog} />)
+    
+    const blogCards = blogList.map(blog => <BlogCard key={blog.id} blog={blog} />)
+    
     return blogCards
 }
