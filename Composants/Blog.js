@@ -6,8 +6,9 @@ function Blog() {
     return (
     <>
         <BlogDetails blogId={blogId}/>
-        
+
         <AddComment blogId={blogId}/>
+        
 
         <CommentList blogId={blogId}/>
     </>

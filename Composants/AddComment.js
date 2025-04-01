@@ -1,41 +1,65 @@
 
-function AddComment({blogId, onCommentAdd}) {
-    const [auteur, setAuteur] = React.useState('');
+
+/// PROBLEME AFFICHAGE !!!! 
+function AddComment({blogId}) {
     const [contenu, setContenu] = React.useState('');
-    
+    const [description, setDescription] = React.useState('');
+    const [commentaires, setCommentaires] = React.useState([]);
+    const [confirmation, setConfirmation] = React.useState(null);   
     const HandleSumbit = async(e) => {
         e.preventDefault();
     
     const nouveauCommentaire = {
-        auteur,
+        publicationId: blogId,
+        date : new Date().toISOString().split('T')[0],
         contenu,
-        publicationId: blogId
+        description
+
     }
 
-    await ajouterCommentaireBd(nouveauCommentaire);
+    const reponseAjoutCommentaireBd = await ajouterCommentaireBd(nouveauCommentaire);
+ 
+
+    if(reponseAjoutCommentaireBd) {
+        console.log("commentaire ID :", reponseAjoutCommentaireBd.id);
+        setAuteur('');
+        setContenu('');
+        setCommentaires([...commentaires, reponseAjoutCommentaireBd]);
+        setCommentaires("Votre commentaire a été ajouté avec succès.");
     }
+    else{
+        setConfirmation("Echec de l'ajout du commentaire.");
+    }
+}
     return (
-        <form onSubmit={HandleSumbit}>
-            <input
-                type="text"
-                placeholder="Auteur"
-                value={auteur}
-                onChange={(e) => setAuteur(e.target.value)}
-            />
-            <input
-                type="text"
-                placeholder="Contenu"
-                value={contenu}
-                onChange={(e) => setContenu(e.target.value)}
-            />
-            <button type="submit">Ajouter un commentaire</button>
-        </form>
+
+    <div className="card mt-4 p-3">
+        <h5 className="card-title">Ajouter un commentaire</h5>
+            <form onSubmit={HandleSumbit}/>
+                <div className="row g-2">
+                    <div className="col"></div>
+                        <input
+                            type="text"
+                            placeholder="Avis du jeu"
+                            value={contenu}
+                            onChange={(e) => setContenu(e.target.value)}
+                        />
+                        <input
+                            type="text"
+                            placeholder="Description du jeu"
+                            value={description}
+                            onChange={(e) => setDescription(e.target.value)}
+                        />
+                        <button type="submit" onClick={HandleSumbit}>Ajouter un commentaire</button>
+                    </div>
+                </div>
+
     ) 
 
 }
 
 // doit faire la requete qui va envouyer le commentaire dans mon API
-function ajouterCommentaireBd() {
+async function ajouterCommentaireBd(nouveauCommentaire) {
     try {
         const response = fetch("http://localhost:3000/commentaires", {
             method: "POST",
@@ -46,18 +70,19 @@ function ajouterCommentaireBd() {
         });
         const commentaire = response.json();
         affichereDataCommentaires(publicationId,commentaire);
-    } catch (error) {
-        console.log(error);
-    }
-    if (response.ok) {
-        const resultat = response.json();
-        console.log("Votre publication a été ajoutée avec succès :", resultat);
 
-        setAuteur('');
-        setContenu('');
-    }
-    else{
+    if (!response.ok) {
         throw new Error(`Erreur lors de l'envoi du commentaire : ${response.status}`);
+    }
+    const donnee = await response.json();
+    console.log("Votre publication a été ajoutée avec succès :", donnee);
+
+
+    return donnee;
+
+    } catch (error) {
+        console.log("Erreur ajout commentaire :", error);
+        return  null;
     }
 }
 

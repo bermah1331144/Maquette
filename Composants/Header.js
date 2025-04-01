@@ -10,7 +10,7 @@ function Header(){
             <div className="collapse navbar-collapse d-flex justify-content-centers" id="navbarNav">
                 <ul className="navbar-nav d-flex">
                     <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="#">Home</a>
+                        <a className="nav-link active" aria-current="page" href="PagePrincipale.html">Home</a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" href="#">Features</a>
