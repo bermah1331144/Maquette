@@ -50,13 +50,13 @@
       "contenu": "Le remake de Resident Evil 4 modernise l'horreur avec des graphismes sublimes. Les mécaniques de jeu ont été améliorées pour une immersion totale."
     },
     {
-      "id": 179,
+      "id": "179",
       "titre": "Stardew Valley : Une évasion champêtre captivante",
       "auteur": " Alex Martin",
       "date": "2025-03-03"
     },
     {
-      "id": 180,
+      "id": "180",
       "titre": "Stardew Valley : L'agriculture au cœur du pixel-art",
       "auteur": "Louis C",
       "date": "2025-03-03",
@@ -119,6 +119,18 @@
       "date": "2023-08-21",
       "contenu": "Le remake de Resident Evil 4 est incroyable, un vrai retour aux sources !",
       "description": "Le gameplay a été modernisé avec succès."
+    },
+    {
+      "id": "2086",
+      "auteur": "aaaaaaaaaaa",
+      "contenu": "aaaaaaaaaaaaaaaaaaaaaaaa",
+      "publicationId": 1
+    },
+    {
+      "id": "10f5",
+      "auteur": "coucouc",
+      "contenu": "s marhce pas , mais bien ca va marcher",
+      "publicationId": "1"
     }
   ]
 }

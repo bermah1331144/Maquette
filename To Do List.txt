@@ -1,3 +1,1 @@
 TO DO LIST
-
-Dans ma page BlogDetails. Il reussi pas a ller chercher les information de db.json. je comprend mon probleme mais je n'Arrive pas a trouver la solution 
