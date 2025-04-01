@@ -12,7 +12,8 @@ function AddComment({blogId}) {
     const nouveauCommentaire = {
         publicationId: blogId,
         date : new Date().toISOString().split('T')[0],
-        contenu
+        contenu,
+        description
 
     }
 
@@ -47,7 +48,7 @@ function AddComment({blogId}) {
                             type="text"
                             placeholder="Description du jeu"
                             value={description}
-                            onChange={(e) => setContenu(e.target.value)}
+                            onChange={(e) => setDescription(e.target.value)}
                         />
                         <button type="submit" onClick={HandleSumbit}>Ajouter un commentaire</button>
                     </div>
